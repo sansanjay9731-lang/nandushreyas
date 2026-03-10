@@ -5,25 +5,25 @@ import { useState, useEffect, useCallback } from 'react';
 const testimonials = [
     {
         quote: "Every emotion from our wedding day was captured beautifully. Looking at our photos feels like reliving the most magical day of our lives.",
-        name: "Priya & Arjun",
+        name: "Anushree & Roshan",
         location: "Traditional Wedding, Bangalore",
         image: "/images/couple-traditional.jpg"
     },
     {
         quote: "We couldn't have asked for a more brilliant team. The photos are pure art — cinematic, deeply emotional, and breathtakingly beautiful.",
-        name: "Meera & Rohan",
+        name: "Nikitha & Sudhanva",
         location: "South Indian Wedding, Kerala",
         image: "/images/couple-white.jpg"
     },
     {
         quote: "From the very first meeting, they understood our vision completely. Every single frame tells a part of our love story.",
-        name: "Sneha & Vikram",
+        name: "Nagarathna & Babin",
         location: "Destination Wedding, Hampi",
         image: "/images/bride-running-mist.jpg"
     },
     {
         quote: "The attention to detail is extraordinary. They captured moments we didn't even know were happening — and those turned out to be the most precious.",
-        name: "Ananya & Karthik",
+        name: "Joyce Mary & Arun",
         location: "Grand Celebration, Bangalore",
         image: "/images/couple-dancing.jpg"
     },
@@ -129,8 +129,8 @@ export default function Testimonials() {
                                         key={i}
                                         onClick={() => setCurrent(i)}
                                         className={`transition-all duration-500 rounded-full ${i === current
-                                                ? 'w-6 h-1.5 bg-n-gold'
-                                                : 'w-1.5 h-1.5 bg-n-gold/25 hover:bg-n-gold/50'
+                                            ? 'w-6 h-1.5 bg-n-gold'
+                                            : 'w-1.5 h-1.5 bg-n-gold/25 hover:bg-n-gold/50'
                                             }`}
                                     />
                                 ))}
