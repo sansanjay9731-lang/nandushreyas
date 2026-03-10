@@ -4,14 +4,14 @@ import { useState } from 'react';
 const categories = ['All', 'Destination Weddings', 'Traditional Weddings', 'Couple Portraits', 'Emotional Moments'] as const;
 
 const allImages = [
-    { src: '/images/couple-water.jpg', alt: 'Cinematic couple portrait on water', category: 'Destination Weddings' },
-    { src: '/images/temple-mandap.jpg', alt: 'Grand traditional temple mandap decoration', category: 'Traditional Weddings' },
-    { src: '/images/bride-bouquet.jpg', alt: 'Beautiful bride with bouquet in luxury car', category: 'Emotional Moments' },
-    { src: '/images/couple-dancing.jpg', alt: 'Couple dancing with traditional drums', category: 'Emotional Moments' },
-    { src: '/images/red-gateway.jpg', alt: 'Stunning red wedding entrance gateway', category: 'Destination Weddings' },
-    { src: '/images/couple-yellow-haldi.jpg', alt: 'Couple at haldi ceremony with yellow smoke', category: 'Traditional Weddings' },
-    { src: '/images/couple-white.jpg', alt: 'Couple in elegant white traditional attire', category: 'Couple Portraits' },
-    { src: '/images/bride-running-mist.jpg', alt: 'Bride running at misty temple at dawn', category: 'Couple Portraits' },
+    { src: '/images/couple-water.jpg', alt: 'Cinematic couple portrait on water', category: 'Destination Weddings', focalPoint: 'center 20%' },
+    { src: '/images/temple-mandap.jpg', alt: 'Grand traditional temple mandap decoration', category: 'Traditional Weddings', focalPoint: 'center 30%' },
+    { src: '/images/bride-bouquet.jpg', alt: 'Beautiful bride with bouquet in luxury car', category: 'Emotional Moments', focalPoint: 'center 15%' },
+    { src: '/images/couple-dancing.jpg', alt: 'Couple dancing with traditional drums', category: 'Emotional Moments', focalPoint: 'center 15%' },
+    { src: '/images/red-gateway.jpg', alt: 'Stunning red wedding entrance gateway', category: 'Destination Weddings', focalPoint: 'center 30%' },
+    { src: '/images/couple-yellow-haldi.jpg', alt: 'Couple at haldi ceremony with yellow smoke', category: 'Traditional Weddings', focalPoint: 'center 25%' },
+    { src: '/images/couple-white.jpg', alt: 'Couple in elegant white traditional attire', category: 'Couple Portraits', focalPoint: 'center 20%' },
+    { src: '/images/bride-running-mist.jpg', alt: 'Bride running at misty temple at dawn', category: 'Couple Portraits', focalPoint: 'center 20%' },
 ];
 
 export default function Portfolio() {
@@ -50,8 +50,8 @@ export default function Portfolio() {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={`text-[10px] md:text-xs uppercase tracking-[0.25em] font-sans px-4 py-2 transition-all duration-500 ${activeCategory === cat
-                                    ? 'text-n-gold border-b border-n-gold'
-                                    : 'text-n-muted hover:text-n-white border-b border-transparent'
+                                ? 'text-n-gold border-b border-n-gold'
+                                : 'text-n-muted hover:text-n-white border-b border-transparent'
                                 }`}
                         >
                             {cat}
@@ -79,6 +79,7 @@ export default function Portfolio() {
                                 src={img.src}
                                 alt={img.alt}
                                 loading="lazy"
+                                style={{ objectPosition: img.focalPoint }}
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out"
                             />
                             {/* Hover overlay */}
