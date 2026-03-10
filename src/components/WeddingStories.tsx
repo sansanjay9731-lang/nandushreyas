@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 const weddings = [
     {
         image: '/images/couple-dancing.jpg',
+        focalPoint: 'center 15%',
         couple: 'A Celebration of Joy',
         location: 'Traditional Wedding, Bangalore',
         excerpt: 'A vibrant celebration filled with pure joy, traditional drums, and the infectious energy of two souls dancing into their forever — every frame radiates happiness.',
@@ -14,6 +15,7 @@ const weddings = [
     },
     {
         image: '/images/couple-collage.jpg',
+        focalPoint: 'center 20%',
         couple: 'Our Story 2026',
         location: 'Garden Wedding, Bangalore',
         excerpt: 'An enchanting garden celebration where vibrant colors met tender moments — from the first touch of hands to stolen glances amidst tropical greenery.',
@@ -25,6 +27,7 @@ const weddings = [
     },
     {
         image: '/images/couple-white.jpg',
+        focalPoint: 'center 20%',
         couple: 'Timeless Elegance',
         location: 'South Indian Wedding, Kerala',
         excerpt: 'A dreamy South Indian celebration wrapped in pristine whites and golden hues, where every tradition was honored and every emotion was felt deeply.',
@@ -73,6 +76,7 @@ export default function WeddingStories() {
                                         src={wedding.image}
                                         alt={wedding.couple}
                                         loading="lazy"
+                                        style={{ objectPosition: wedding.focalPoint }}
                                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2s] ease-out"
                                     />
                                 </div>
